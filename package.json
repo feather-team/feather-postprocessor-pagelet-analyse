@@ -1,0 +1,20 @@
+{
+  "name": "feather-postprocessor-pagelet-analyse",
+  "version": "0.1.0",
+  "description": "feather pagelet analyse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/feather-ui/feather-postprocessor-pagelet-analyse.git"
+  },
+  "keywords": [
+    "feather",
+    "pagelet analyse"
+  ],
+  "author": {
+    "name": "jsyczhanghao@sina.com"
+  }
+}
