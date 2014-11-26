@@ -1,6 +1,6 @@
 {
   "name": "feather-postprocessor-pagelet-analyse",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "feather pagelet analyse",
   "main": "index.js",
   "scripts": {

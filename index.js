@@ -24,8 +24,13 @@ PageLet("' + id + '","' + pageletId + '");\
             file.addRequire('/static/js/pagelet.js');
             file.addRequire(sameCss.id);
     	}else{
-            content += '<link rel="stylesheet href="' + sameCss.subpath + '" type="text/css" />';
-    		content += '<script>require.async("' + sameJs.subpath + '");</script>';
+            if(sameCss.exists()){
+                content += '<link rel="stylesheet href="' + sameCss.subpath + '" type="text/css" />';
+            }
+
+            if(sameJs.exists()){
+                content += '<script>require.async("' + sameJs.subpath + '");</script>';
+            }
     	}
 
         file.addRequire(sameJs.id);
