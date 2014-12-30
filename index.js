@@ -15,7 +15,7 @@ module.exports = function(content, file, conf){
                 content = content.replace(new RegExp('<\\/' + type + '>', 'g'), '<\\\/' + type + '>');
             }
 
-            content = '<' + type + ' id="' + id + '" style="display: none !important;" type="text/html">' + content + '</' + type + '>';
+            content = '<' + type + ' id="' + id + '" style="display: none !important;" type="text/html">\r\n' + content + '</' + type + '>';
 
             var async1 = ['/static/js/pagelet.js'];
 
