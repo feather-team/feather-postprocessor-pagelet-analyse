@@ -27,7 +27,7 @@ module.exports = function(content, file, conf){
 PageLet("' + id + '","' + pageletId + '","' + type + '");\
 ' + (sameJs.exists() ? 'require.async("' + sameJs.subpath + '")' : '') + '});</script>';
 
-            file.addRequire('/static/js/pagelet.js');
+            file.addRequire('/static/pagelet.js');
             file.addRequire(sameCss.id);
         }else{
             if(sameCss.exists()){
