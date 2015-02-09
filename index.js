@@ -26,9 +26,6 @@ module.exports = function(content, file, conf){
             content += '<script>require.async(' + feather.util.json(async1) + ',function(PageLet){\
 PageLet("' + id + '","' + pageletId + '","' + type + '");\
 ' + (sameJs.exists() ? 'require.async("' + sameJs.subpath + '")' : '') + '});</script>';
-
-            file.addRequire('/static/pagelet.js');
-            file.addRequire(sameCss.id);
         }else{
             if(sameCss.exists()){
                 content += '<link rel="stylesheet href="' + sameCss.subpath + '" type="text/css" />';
@@ -38,8 +35,6 @@ PageLet("' + id + '","' + pageletId + '","' + type + '");\
                 content += '<script>require.async("' + sameJs.subpath + '");</script>';
             }
         }
-
-        file.addRequire(sameJs.id);
     }
 
     return content;
