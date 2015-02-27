@@ -17,7 +17,7 @@ module.exports = function(content, file, conf){
 
             content = '<' + type + ' id="' + id + '" style="display: none !important;" type="text/html">\r\n' + content + '</' + type + '>';
 
-            var async1 = ['/static/js/pagelet.js'];
+            var async1 = ['/static/pagelet.js'];
 
             if(sameCss.exists()){
                 async1.push(sameCss.subpath);
@@ -29,10 +29,6 @@ PageLet("' + id + '","' + pageletId + '","' + type + '");\
         }else{
             if(sameCss.exists()){
                 content += '<link rel="stylesheet href="' + sameCss.subpath + '" type="text/css" />';
-            }
-
-            if(sameJs.exists()){
-                content += '<script>require.async("' + sameJs.subpath + '");</script>';
             }
         }
     }
